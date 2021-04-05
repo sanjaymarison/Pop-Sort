@@ -27,4 +27,4 @@ def test(list_=[7,5,3,5,8,2,4,3],cycles=100000): #mean time taken to sort for th
   print("Mean time taken to cycle through",cycles,"iterations for",given_list," is ",mean(time_list))
   print("Total time taken to cycle through:",sum(time_list))
   print()
-test()
+
