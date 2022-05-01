@@ -1,4 +1,3 @@
-
 try:
   import time
   from statistics import mean
@@ -28,3 +27,20 @@ def test(list_=[7,5,3,5,8,2,4,3],cycles=100000): #mean time taken to sort for th
   print("Total time taken to cycle through:",sum(time_list))
   print()
 
+def test2(list_=[7,5,3,5,8,2,4,3],cycles=100000):
+  time_list = []
+  for i in range(cycles):
+    given_list = list_.copy()
+    start = time.time()
+    given_list.sort()
+    end = time.time()
+    time_list.append((end-start))
+  given_list = list_.copy()
+  print()
+  print("Mean time taken to cycle through",cycles,"iterations for",given_list," is ",mean(time_list))
+  print("Total time taken to cycle through:",sum(time_list))
+  print()
+
+test()
+print('\n\n\n')
+test2()
